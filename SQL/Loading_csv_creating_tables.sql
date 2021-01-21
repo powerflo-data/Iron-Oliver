@@ -60,6 +60,10 @@ load data local infile 'C:/Users/powerflo/Iron-Oliver/SQL/account.csv' -- this f
 into table account_demo
 fields terminated BY ',';
 
+update district_demo
+set A4 = 0, A5 = 0, A6 = 0
+where A2 = 'Kladno';
+
 
 
 select count(*) from district_demo;
