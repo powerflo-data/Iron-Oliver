@@ -15,9 +15,11 @@ CREATE TABLE rental_june AS
 #check for customer rentals in may
 select count(rental_id) as Number_of_Rentals, customer_id as Customer
 from rental_may
-group by customer_id;
+group by customer_id
+order by Number_of_Rentals DESC;
 
 #check for customer rentals in june
 select count(rental_id) as Number_of_Rentals, customer_id as Customer
 from rental_june
-group by customer_id;
+group by customer_id
+order by Number_of_Rentals DESC;
