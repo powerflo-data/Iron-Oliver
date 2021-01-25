@@ -61,3 +61,11 @@ join category c
 on fc.category_id = c.category_id
 group by c.name
 limit 5;
+
+#7
+select count(i.film_id) as Number_of_Films_avaiable, f.title as Filmname
+from inventory i
+right join film f
+on f.film_id = i.film_id
+where f.title = 'Academy Dinosaur' and i.store_id = 1;
+#4 avaiable Academy Dinosaur Movies
