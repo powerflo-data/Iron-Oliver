@@ -23,7 +23,7 @@ order by Total_Amount DESC;
 
 #4
 select f.title as Film, count(fa.actor_id) as Number_of_actors from film f
-join film_actor fa
+left join film_actor fa
 on f.film_id = fa.film_id
 group by f.title
 order by Number_of_actors DESC;
